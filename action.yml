@@ -1,0 +1,22 @@
+name: 'Keywords Scanner'
+description: 'Check if there are any keywords in files'
+branding:
+  icon: search
+  color: blue
+inputs:
+  keywords:
+    description: 'keywords json string'
+    required: true
+  ignoreCase:
+    description: 'ignore keyword case'
+    required: false
+  ignoredDirs:
+    description: 'the dirs to ignore'
+    required: false
+    default: '[]'
+outputs:
+  result:
+    description: 'result'
+runs:
+  using: 'node16'
+  main: 'index.js'
